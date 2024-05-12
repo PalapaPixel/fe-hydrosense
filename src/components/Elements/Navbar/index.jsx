@@ -62,8 +62,8 @@ const Navbar = () => {
       </div>
       <div
         className={`${
-          nav ? "right-0 " : "-right-[100%]"
-        } flex flex-col gap-4 pt-5 px-5 xl:hidden absolute top-0 right-0 w-full h-screen bg-white`}
+          nav ? "right-0 " : "right-[100%]"
+        } flex flex-col gap-4 pt-5 px-5 md:hidden absolute top-0 right-0 w-full h-screen bg-white`}
       >
         <IoIosCloseCircleOutline
           className="cursor-pointer text-[20px]"
