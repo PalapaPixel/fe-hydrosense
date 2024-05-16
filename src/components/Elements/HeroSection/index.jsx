@@ -1,3 +1,5 @@
+import Button from "../Button";
+
 const HeroSection = () => {
   return (
     <div id="heroSection" className="w-full h-screen px-5 lg:px-[72px]">
@@ -10,9 +12,7 @@ const HeroSection = () => {
           dengan fitur yang kami sediakan
         </p>
         <div className="pt-[49px]">
-          <button className="px-6 lg:px-10 py-[15px] text-[20px] justify-center flex-col bg-liniear-greem outline-none hover:bg-liniear-greem2 hover:text-white rounded-full">
-            Daftar Sekarang
-          </button>
+          <Button>Daftar Sekarang</Button>
         </div>
       </div>
     </div>

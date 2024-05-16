@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Logo from "../../../assets/logo.png";
 import { IoMdMenu, IoIosCloseCircleOutline } from "react-icons/io";
 import { useState } from "react";
+import Button from "../Button";
 
 const navLink = [
   {
@@ -30,7 +31,7 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
 
   return (
-    <div className="flex justify-between items-center px-5 lg:px-[15px] h-[80px] w-full fixed top-4">
+    <div className=" flex justify-between items-center px-5 lg:px-[15px] h-[80px] w-full fixed bg-[#FFFFFF] top-0">
       <div className="w-[113px] h-[58px]">
         <a href="#">
           <img src={Logo} alt="logo_hydrosense" />
@@ -52,9 +53,7 @@ const Navbar = () => {
         </li>
       </ul>
       <div className="flex items-center gap-x-5">
-        <button className="px-6 lg:px-10 py-2 text-[20px] bg-liniear-greem outline-none hover:bg-liniear-greem2 hover:text-white rounded-full">
-          Login
-        </button>
+        <Button>Login</Button>
         <IoMdMenu
           className="text-[20px] block md:hidden"
           onClick={() => setNav((prev) => !prev)}
