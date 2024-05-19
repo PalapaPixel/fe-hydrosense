@@ -7,6 +7,9 @@ export default {
         "liniear-greem": "#93CB6F",
         "liniear-greem2": "#73BA5A",
       },
+      backgroundImage: {
+        "image-banner": "url('/src/assets/banner.png')",
+      },
     },
   },
   plugins: [],

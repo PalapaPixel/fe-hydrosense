@@ -1,90 +1,109 @@
-import { Link } from "react-router-dom";
-import Logo from "../../../assets/logo.png";
-import { IoMdMenu, IoIosCloseCircleOutline } from "react-icons/io";
-import { useState } from "react";
-import Button from "../Button";
-
-const navLink = [
-  {
-    id: 1,
-    title: "Home",
-  },
-  {
-    id: 2,
-    title: "About",
-  },
-  {
-    id: 3,
-    title: "Hidropedia",
-  },
-  {
-    id: 4,
-    title: "Monitoring",
-  },
-  {
-    id: 5,
-    title: "Product",
-  },
-];
+import imgLogo from "../../../assets/logo.png";
 
 const Navbar = () => {
-  const [nav, setNav] = useState(false);
-
   return (
-    <div className=" flex justify-between items-center px-5 lg:px-[15px] h-[80px] w-full fixed bg-[#FFFFFF] top-0">
-      <div className="w-[113px] h-[58px]">
-        <a href="#">
-          <img src={Logo} alt="logo_hydrosense" />
-        </a>
-      </div>
-      <ul className="hidden md:flex">
-        <li className="flex gap-x-20 ">
-          {navLink.map((item) => {
-            return (
-              <Link
-                to={item.id}
-                key={item.id}
-                className="hover:text-liniear-greem2 text-[20px] md:text-xl"
+    <header className="bg-white w-full fixed">
+      <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 ">
+        <div className="flex h-16 items-center justify-between ">
+          <div className="md:flex md:items-center md:gap-12">
+            <a className="block text-teal-600" href="#">
+              <span className="sr-only">Home</span>
+              <img src={imgLogo} alt="" />
+            </a>
+          </div>
+
+          <div className="hidden md:block">
+            <nav aria-label="Global">
+              <ul className="flex items-center gap-6 text-sm">
+                <li>
+                  <a
+                    className="text-gray-500 transition hover:text-gray-500/75"
+                    href="#"
+                  >
+                    Home
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    className="text-gray-500 transition hover:text-gray-500/75"
+                    href="#"
+                  >
+                    About
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    className="text-gray-500 transition hover:text-gray-500/75"
+                    href="#"
+                  >
+                    Hidropedia
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    className="text-gray-500 transition hover:text-gray-500/75"
+                    href="#"
+                  >
+                    Monitoring
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    className="text-gray-500 transition hover:text-gray-500/75"
+                    href="#"
+                  >
+                    Product
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div className="flex items-center gap-4">
+            <div className="sm:flex sm:gap-4">
+              <a
+                className="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow"
+                href="#"
               >
-                {item.title}
-              </Link>
-            );
-          })}
-        </li>
-      </ul>
-      <div className="flex items-center gap-x-5">
-        <Button>Login</Button>
-        <IoMdMenu
-          className="text-[20px] block md:hidden"
-          onClick={() => setNav((prev) => !prev)}
-        />
-      </div>
-      <div
-        className={`${
-          nav ? "right-0 " : "right-[100%]"
-        } flex flex-col gap-4 pt-5 px-5 md:hidden absolute top-0 right-0 w-full h-screen bg-white`}
-      >
-        <IoIosCloseCircleOutline
-          className="cursor-pointer text-[20px]"
-          onClick={() => setNav((prev) => !prev)}
-        />
-        <ul className="md:hidden">
-          <li className="flex gap-y-4 flex-col">
-            {navLink.map((item) => {
-              return (
-                <Link
-                  to={item.id}
-                  key={item.id}
-                  className="hover:text-liniear-greem2 text-[20px] xl:text-xl border-b cursor-pointer"
+                Login
+              </a>
+
+              <div className="hidden sm:flex">
+                <a
+                  className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600"
+                  href="#"
                 >
-                  {item.title}
-                </Link>
-              );
-            })}
-          </li>
-        </ul>
+                  Register
+                </a>
+              </div>
+            </div>
+
+            <div className="block md:hidden">
+              <button className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </header>
   );
 };
 
