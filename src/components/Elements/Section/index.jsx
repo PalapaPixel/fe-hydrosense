@@ -1,35 +1,33 @@
-import imageSection from "../../../assets/section.png";
 // import Button from "../Button";
 
 const Section = () => {
   return (
     <section>
-      <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
-          <div className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full">
-            <img
-              alt="Image Section"
-              src={imageSection}
-              className="absolute inset-0 h-full w-full object-cover"
-            />
+      <div className="container px-6 py-16 mx-auto">
+        <div className="items-center lg:flex">
+          <div className="w-full lg:w-1/2">
+            <div className="lg:max-w-lg">
+              <h1 className="text-3xl font-semibold text-gray-800 dark:text-black lg:text-4xl">
+                Kenapa harus kami ?
+              </h1>
+
+              <p className="mt-3 text-gray-600 dark:text-black">
+                HydroSense menyajikan informasi seputar cara mengelola tanaman
+                hidroponik, dan disertai panduan terstruktur.
+              </p>
+
+              <button className="w-full px-5 py-2 mt-6 text-sm tracking-wider text-white uppercase transition-colors duration-300 transform bg-blue-600 rounded-lg lg:w-auto hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
+                Shop Now
+              </button>
+            </div>
           </div>
 
-          <div className="lg:py-24">
-            <h2 className="text-3xl font-bold sm:text-4xl">
-              Kenapa harus kami ?
-            </h2>
-
-            <p className="mt-4 text-gray-600">
-              HydroSense menyajikan informasi seputar cara mengelola tanaman
-              hidroponik, dan disertai panduan terstruktur.
-            </p>
-
-            <a
-              href="#"
-              className="mt-8 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
-            >
-              Temukan
-            </a>
+          <div className="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2">
+            <img
+              className="w-full h-full lg:max-w-3xl"
+              src="https://merakiui.com/images/components/Catalogue-pana.svg"
+              alt="Catalogue-pana.svg"
+            />
           </div>
         </div>
       </div>
