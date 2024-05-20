@@ -1,4 +1,5 @@
 import imgLogo from "../../../assets/logo.png";
+import Button from "../Button";
 
 const Navbar = () => {
   return (
@@ -18,7 +19,7 @@ const Navbar = () => {
                 <li>
                   <a
                     className="text-gray-500 transition hover:text-gray-500/75"
-                    href="#"
+                    href="/"
                   >
                     Home
                   </a>
@@ -27,7 +28,7 @@ const Navbar = () => {
                 <li>
                   <a
                     className="text-gray-500 transition hover:text-gray-500/75"
-                    href="#"
+                    href="/about"
                   >
                     About
                   </a>
@@ -36,7 +37,7 @@ const Navbar = () => {
                 <li>
                   <a
                     className="text-gray-500 transition hover:text-gray-500/75"
-                    href="#"
+                    href="/hidropedia"
                   >
                     Hidropedia
                   </a>
@@ -54,7 +55,7 @@ const Navbar = () => {
                 <li>
                   <a
                     className="text-gray-500 transition hover:text-gray-500/75"
-                    href="#"
+                    href="/product"
                   >
                     Product
                   </a>
@@ -65,21 +66,7 @@ const Navbar = () => {
 
           <div className="flex items-center gap-4">
             <div className="sm:flex sm:gap-4">
-              <a
-                className="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow"
-                href="#"
-              >
-                Login
-              </a>
-
-              <div className="hidden sm:flex">
-                <a
-                  className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600"
-                  href="#"
-                >
-                  Register
-                </a>
-              </div>
+              <Button>Login</Button>
             </div>
 
             <div className="block md:hidden">

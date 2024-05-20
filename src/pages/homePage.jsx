@@ -2,9 +2,10 @@ import Artikel from "../components/Elements/Artikel";
 import Banner from "../components/Elements/Banner";
 import Navbar from "../components/Elements/Navbar";
 import Section from "../components/Elements/Section";
-import CardProduct from "../components/Elements/CardProduct";
-import Features from "../components/Elements/Features";
 import Footer from "../components/Elements/Footer";
+import CardFeatures from "../components/Elements/CardFeatures";
+import CardProduct from "../components/Elements/CardProduct";
+import Card from "../components/Elements/Card";
 
 const HomePage = () => {
   return (
@@ -12,8 +13,9 @@ const HomePage = () => {
       <Navbar />
       <Banner />
       <Section />
-      <Features />
-      <CardProduct />
+      <CardFeatures />
+      {/* <CardProduct /> */}
+      <Card />
       <Artikel />
       <Footer />
     </div>
