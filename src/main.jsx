@@ -7,6 +7,8 @@ import AboutPage from "./pages/aboutPage";
 import HidropediaPage from "./pages/hidropediaPage";
 import ErrorPage from "./pages/404";
 import ProductPage from "./pages/productPage";
+import LoginPage from "./pages/loginPage";
+import MonitoringPage from "./pages/monitoringPage";
 
 const router = createBrowserRouter([
   {
@@ -15,12 +17,20 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
+    path: "/login",
+    element: <LoginPage />,
+  },
+  {
     path: "/about",
     element: <AboutPage />,
   },
   {
     path: "/hidropedia",
     element: <HidropediaPage />,
+  },
+  {
+    path: "/monitoring",
+    element: <MonitoringPage />,
   },
   {
     path: "/product",

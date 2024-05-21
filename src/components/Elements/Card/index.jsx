@@ -22,39 +22,41 @@ const cardJson = [
     image:
       "https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/305/2024/05/02/Tak-berjudul373_20240502000612-1499106585.png",
   },
-  {
-    id: 4,
-    title: "Card Title 4",
-    description: "Description for Card 4",
-    image:
-      "https://pertanian.sultengprov.go.id/wp-content/uploads/2022/12/smart-farming-iot-agriculture.webp",
-  },
 ];
 
 const Card = () => {
   return (
-    <div className="flex flex-row flex-wrap items-center justify-center">
-      {cardJson.map((item) => (
-        <div
-          key={item.id}
-          className="relative flex w-96 flex-col rounded-xl my-10 mx-10 bg-[#EBF8FE] bg-clip-border text-gray-700 shadow-md"
-        >
-          <div className="relative mx-4 -mt-6 h-56 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
-            <img src={item.image} alt="img-blur-shadow" />
-          </div>
-          <div className="p-6">
-            <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
-              {item.title}
-            </h5>
-            <p className="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
-              {item.description}
-            </p>
-          </div>
-          <div className="p-6 pt-0">
-            <Button>Detail</Button>
-          </div>
+    <div className="py-12">
+      <div className=" xl:container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {cardJson.map((card) => (
+            <div
+              key={card.id}
+              className="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-[#EBF8FE] bg-opacity-50 shadow-2xl shadow-gray-600/10"
+            >
+              <div className="relative overflow-hidden rounded-xl">
+                <img
+                  src={card.image}
+                  alt="art cover"
+                  loading="lazy"
+                  width="1000"
+                  height="667"
+                  className="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="mt-6 relative">
+                <h3 className="text-2xl font-semibold text-gray-800 dark:text-black">
+                  {card.title}
+                </h3>
+                <p className="mt-6 mb-8 text-gray-600 dark:text-black">
+                  {card.description}
+                </p>
+                <Button>Detail</Button>
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </div>
   );
 };

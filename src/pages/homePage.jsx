@@ -15,8 +15,23 @@ const HomePage = () => {
       <Section />
       <CardFeatures />
       {/* <CardProduct /> */}
-      <Card />
-      <Artikel />
+      <div className="my-20">
+        <h1 className="text-center text-5xl text-green-600 font-bold">
+          Product
+        </h1>
+        <div className="mt-15">
+          <Card />
+        </div>
+      </div>
+      <div className="my-20">
+        <h1 className="text-center text-5xl text-green-600 font-bold">
+          Artikel Terbaru
+        </h1>
+        <div className="mt-15">
+          <Artikel />
+        </div>
+      </div>
+
       <Footer />
     </div>
   );

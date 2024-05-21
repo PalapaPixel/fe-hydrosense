@@ -1,125 +1,73 @@
-const profile = [
+const profiles = [
+  {
+    name: "Kntl",
+    role: "Chief Executive Officer",
+    description:
+      "The corporate IQ is to establish an atmosphere that promotes knowledge sharing and collaboration.",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSszvsccKUE5HBv_-DUyvp6sTd8BeDSURfHd2iFPfDnzLhkEP3K9GCLF_c3u4HRwpd9eLg&usqp=CAU",
+  },
+  {
+    name: "Kntl",
+    role: "Chief Executive Officer",
+    description:
+      "The corporate IQ is to establish an atmosphere that promotes knowledge sharing and collaboration.",
+    image:
+      "https://awsimages.detik.net.id/community/media/visual/2023/08/25/lihat-meme-ini-auto-putus-asa-tetap-menyerah-dan-jangan-semangat-4.jpeg?w=1200",
+  },
   {
     name: "Kntl",
     role: "Chief Executive Officer",
     description:
       "The corporate IQ is to establish an atmosphere that promotes knowledge sharing and collaboration.",
     image: "https://cdn.tuk.dev/assets/photo-1564061170517-d3907caa96ea.jfif",
-    social: [
-      {
-        icons: "Github",
-        link: "#",
-      },
-      {
-        icons: "Twitter",
-        link: "#",
-      },
-      {
-        icons: "Instagram",
-        link: "#",
-      },
-    ],
   },
   {
-    name: "mmk",
-    role: "Software Engineer",
+    name: "Kntl",
+    role: "Chief Executive Officer",
     description:
-      "Passionate about building scalable and efficient applications.",
-    image: "https://example.com/john-doe.jpg",
-    social: [
-      {
-        icons: "Github",
-        link: "#",
-      },
-      {
-        icons: "Twitter",
-        link: "#",
-      },
-      {
-        icons: "LinkedIn",
-        link: "#",
-      },
-    ],
+      "The corporate IQ is to establish an atmosphere that promotes knowledge sharing and collaboration.",
+    image: "https://cdn.tuk.dev/assets/photo-1564061170517-d3907caa96ea.jfif",
   },
-  {
-    name: "jhony",
-    role: "UI/UX Designer",
-    description:
-      "Creating beautiful and intuitive user interfaces for seamless user experiences.",
-    image: "https://example.com/jane-smith.jpg",
-    social: [
-      {
-        icons: "Dribbble",
-        link: "#",
-      },
-      {
-        icons: "Behance",
-        link: "#",
-      },
-      {
-        icons: "Instagram",
-        link: "#",
-      },
-    ],
-  },
-  // Add more profiles here
+  // Tambahkan profil lain di sini
 ];
 
 const About = () => {
   return (
-    <div className="mb-16">
-      <div className="container flex justify-center mx-auto pt-16">
+    <div className="py-20">
+      <div className="xl:container mx-auto px-6 md:px-12">
         <div>
-          <p className="text-gray-500 text-lg text-center font-normal pb-3">
-            BUILDING TEAM
-          </p>
-          <h1 className="xl:text-4xl text-3xl text-center text-gray-800 font-extrabold pb-6 sm:w-4/6 w-5/6 mx-auto">
-            The Talented People Behind the Scenes of the Organization
-          </h1>
+          <h1 className="text-center text-3xl font-bold mb-10">TIM KAMI</h1>
         </div>
-      </div>
-      <div className="w-full bg-gray-100 px-10 pt-10">
-        <div className=" container mx-auto">
-          <div className="lg:flex md:flex sm:flex items-center xl:justify-between flex-row flex-wrap md:justify-around sm:justify-around lg:justify-around">
-            {profile.map((person, index) => (
-              <div
-                key={index}
-                className="xl:w-1/3 sm:w-3/3 md:w-2/5 relative mt-16 mb-32 mx-16 sm:mb-24 xl:max-w-sm lg:w-2/5"
-              >
-                {/* Card */}
-                <div className="rounded overflow-hidden shadow-md bg-white">
-                  <div className="absolute -mt-20 w-full flex justify-center">
-                    <div className="h-32 w-32">
-                      <img
-                        src={person.image}
-                        alt={`Display Picture of ${person.name}`}
-                        className="rounded-full object-cover h-full w-full shadow-md"
-                      />
-                    </div>
-                  </div>
-                  <div className="px-6 mt-16">
-                    <h1 className="font-bold text-3xl text-center mb-1">
-                      {person.name}
-                    </h1>
-                    <p className="text-gray-800 text-sm text-center">
-                      {person.role}
-                    </p>
-                    <p className="text-center text-gray-600 text-base pt-3 font-normal">
-                      {person.description}
-                    </p>
-                    <div className="w-full flex justify-center pt-5 pb-5">
-                      {person.social.map((social, index) => (
-                        <a key={index} href={social.link} className="mx-5">
-                          <div>{social.icons}</div>
-                        </a>
-                      ))}
-                    </div>
-                  </div>
+        <div className="grid gap-6 px-4 sm:px-0 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          {profiles.map((profile, index) => (
+            <div
+              key={index}
+              className="group relative rounded-3xl space-y-6 overflow-hidden"
+            >
+              <img
+                className="mx-auto h-[26rem] w-full grayscale object-cover object-top transition duration-500 group-hover:scale-105 group-hover:grayscale-0"
+                src={profile.image}
+                alt={profile.name}
+                loading="lazy"
+                width="640"
+                height="805"
+              />
+              <div className="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 bg-gray-800 dark:bg-white translate-y-24 transition duration-300 ease-in-out group-hover:translate-y-0 text-center">
+                <div>
+                  <h4 className="text-xl font-semibold dark:text-gray-700 text-white">
+                    {profile.name}
+                  </h4>
+                  <span className="block text-sm text-gray-500">
+                    {profile.role}
+                  </span>
                 </div>
-                {/* Card */}
+                <p className="mt-8 text-gray-300 dark:text-gray-600">
+                  {profile.description}
+                </p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

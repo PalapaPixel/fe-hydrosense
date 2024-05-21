@@ -2,6 +2,10 @@ import imgLogo from "../../../assets/logo.png";
 import Button from "../Button";
 
 const Navbar = () => {
+  const handleLogin = () => {
+    console.log("login");
+    window.location.href = "/login";
+  };
   return (
     <header className="bg-white w-full fixed">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 ">
@@ -46,7 +50,7 @@ const Navbar = () => {
                 <li>
                   <a
                     className="text-gray-500 transition hover:text-gray-500/75"
-                    href="#"
+                    href="/monitoring"
                   >
                     Monitoring
                   </a>
@@ -66,7 +70,7 @@ const Navbar = () => {
 
           <div className="flex items-center gap-4">
             <div className="sm:flex sm:gap-4">
-              <Button>Login</Button>
+              <Button onClick={handleLogin}>Login</Button>
             </div>
 
             <div className="block md:hidden">

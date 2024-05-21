@@ -8,7 +8,7 @@ export default {
         "liniear-greem2": "#73BA5A",
       },
       backgroundImage: {
-        "image-banner": "url('/src/assets/banner.png')",
+        "image-banner": "url('/src/assets/banner.jpeg')",
       },
     },
   },

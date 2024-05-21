@@ -2,7 +2,10 @@ import Button from "../Button";
 
 const Banner = () => {
   return (
-    <section className="bg-image-banner bg-cover bg-center bg-no-repeat">
+    <section
+      className="bg-image-banner bg-cover bg-center bg-no-repeat"
+      // style={{ backgroundImage: "../../public/banner.jpeg" }}
+    >
       <div className="container px-6 mx-auto">
         <div className=" max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
           <div className="max-w-xl text-start ltr:sm:text-left rtl:sm:text-right">
