@@ -1,30 +1,30 @@
 const profiles = [
   {
-    name: "Kntl",
-    role: "Chief Executive Officer",
+    name: "User",
+    role: "UI/UX Designer",
     description:
       "The corporate IQ is to establish an atmosphere that promotes knowledge sharing and collaboration.",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSszvsccKUE5HBv_-DUyvp6sTd8BeDSURfHd2iFPfDnzLhkEP3K9GCLF_c3u4HRwpd9eLg&usqp=CAU",
   },
   {
-    name: "Kntl",
-    role: "Chief Executive Officer",
+    name: "User",
+    role: "UI/UX Designer",
     description:
       "The corporate IQ is to establish an atmosphere that promotes knowledge sharing and collaboration.",
     image:
       "https://awsimages.detik.net.id/community/media/visual/2023/08/25/lihat-meme-ini-auto-putus-asa-tetap-menyerah-dan-jangan-semangat-4.jpeg?w=1200",
   },
   {
-    name: "Kntl",
-    role: "Chief Executive Officer",
+    name: "User",
+    role: "UI/UX Designer",
     description:
       "The corporate IQ is to establish an atmosphere that promotes knowledge sharing and collaboration.",
     image: "https://cdn.tuk.dev/assets/photo-1564061170517-d3907caa96ea.jfif",
   },
   {
-    name: "Kntl",
-    role: "Chief Executive Officer",
+    name: "User",
+    role: "UI/UX Designer",
     description:
       "The corporate IQ is to establish an atmosphere that promotes knowledge sharing and collaboration.",
     image: "https://cdn.tuk.dev/assets/photo-1564061170517-d3907caa96ea.jfif",

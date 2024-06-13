@@ -1,13 +1,10 @@
+import { Link } from "react-router-dom";
 import imgLogo from "../../../assets/logo.png";
 import Button from "../Button";
 
 const Navbar = () => {
-  const handleLogin = () => {
-    console.log("login");
-    window.location.href = "/login";
-  };
   return (
-    <header className="bg-white w-full fixed">
+    <header className="bg-white w-full fixed z-10">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 ">
         <div className="flex h-16 items-center justify-between ">
           <div className="md:flex md:items-center md:gap-12">
@@ -19,50 +16,50 @@ const Navbar = () => {
 
           <div className="hidden md:block">
             <nav aria-label="Global">
-              <ul className="flex items-center gap-6 text-sm">
+              <ul className="flex items-center gap-6 text-sm font-bold">
                 <li>
-                  <a
+                  <Link
                     className="text-gray-500 transition hover:text-gray-500/75"
-                    href="/"
+                    to="/"
                   >
                     Home
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
+                  <Link
                     className="text-gray-500 transition hover:text-gray-500/75"
-                    href="/about"
+                    to="/about"
                   >
                     About
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
+                  <Link
                     className="text-gray-500 transition hover:text-gray-500/75"
-                    href="/hidropedia"
+                    to="/hidropedia"
                   >
                     Hidropedia
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
+                  <Link
                     className="text-gray-500 transition hover:text-gray-500/75"
-                    href="/monitoring"
+                    to="/monitoring"
                   >
                     Monitoring
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
+                  <Link
                     className="text-gray-500 transition hover:text-gray-500/75"
-                    href="/product"
+                    to="/product"
                   >
                     Product
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>
@@ -70,7 +67,9 @@ const Navbar = () => {
 
           <div className="flex items-center gap-4">
             <div className="sm:flex sm:gap-4">
-              <Button onClick={handleLogin}>Login</Button>
+              <Link to={"/login"}>
+                <Button>Login</Button>
+              </Link>
             </div>
 
             <div className="block md:hidden">
